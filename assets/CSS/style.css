@@ -1,0 +1,69 @@
+/* TODO:  *//* REVIEW:  *//* FIXME:  *//* SECTION:  *//* STUB:  *//* ANCHOR:  */
+/* NOTE:  *//* *: *//* !: *//* ?: */
+
+*, *::before, *::after {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    width: 100vw; height: 100vh; /* NOTE:  */
+    border: 2px solid black; /* NOTE:  */
+    font-family: sans-serif; /* NOTE:  */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    border: 3px solid black;
+    width: 400px;
+    height: 400px;
+}
+main > div {
+    border: 5px solid lightgray;
+    text-align: center;
+    height: 20%;
+}
+main > section {
+    border: 5px solid darkgray;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+    section > div {
+        width: 100%;
+        height: 100%;
+    }
+.score-board {
+    border: 3px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-number {
+    border: 3px solid blue;
+    display: flex;
+    justify-content: space-around;
+
+}
+    .random-number-box,
+    .total-score-box
+    {
+        border: 3px solid lightblue;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+.btn-crystal {
+    border: 3px solid red;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

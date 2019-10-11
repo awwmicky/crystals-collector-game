@@ -1,0 +1,45 @@
+< Pseudo Notes >
+
+* display 4 buttons to DOM
+    * replace button with images of crystal
+    * click event listener
+* create random number generator
+    * numbers between 19 - 120
+* button interaction
+    * each button contains a number value
+    * adds up to the total score
+        * update total score counter to DOM
+* if statement
+    * total score mathes random number
+        * if matches, win & reset
+        * else if passes random number, lose & reset
+* function scoreboard
+    * track if win &| lose
+        * add win point if win
+        * add loss point if loss
+* each crystal button contains random number value
+    * each game it resets with value between 1-12
+* function reset
+    * reset score & score counter
+
+
+
+* 5 total random generator
+
+
+fn scoreboard
+fn reset
+fn numgenCrystal
+fn numgenTotalScore
+
+✓ : math (120-19)+19
+✓ : math (12)+1
+
+btn value
+btn attr
+btn data-i
+
+if (randNum === finalScore)
+else if (finalScore > randNum)
+
+DOM 
