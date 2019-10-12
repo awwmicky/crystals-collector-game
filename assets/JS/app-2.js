@@ -1,9 +1,20 @@
+/* 
+= Bugs/Issue =
+- each button contains different number & crystal
+    - lowered the chances of repeatability
+*/
+/*
+= Bonus =
+- crystal random animation
+- set timeout for win/loss
+*/
+
 /* -------------------------------------------------------------------------- */
 
 $(() => {
 
-let randNumCrystal;
 let randNumTarget;
+let randNumCrystal;
 
 let winPoint = 0;
 let lossPoint = 0;
@@ -15,44 +26,24 @@ const $scoreNum = $('.score-number');
 const $playerScore = $('.player-score');
 
 const $btn = $('.btn');
+const $img = $('.crystal');
 const $btn1 = $('.btn-1');
 const $btn2 = $('.btn-2');
 const $btn3 = $('.btn-3');
 const $btn4 = $('.btn-4');
 
-// option 1
-const randNum = {
-    numCrystal: () => {
-        randNumCrystal = Math.floor(Math.random() * 12) + 1;
-        return randNumCrystal;
-    },
-    numTarget: () => {
-        randNumTarget = Math.floor(Math.random() * (120 - 19)) + 19;
-        return randNumTarget;
-    }
-};
-    // console.dir(randNum);
 
-
-/* 
-// option 2
-const randNum = () => {
-    randNumCrystal = Math.floor(Math.random() * 12) + 1;
-    randNumTarget = Math.floor(Math.random() * (120 - 19)) + 19;
-    return {
-        numCrystal : randNumCrystal,
-        numTarget : randNumTarget
-    };
-};
-    // console.dir(randNum);
-*/
 
 function startGame() {
-    randNum.numTarget();
+    randNumTarget = Math.floor(Math.random() * (120 - 19)) + 19;
     $btn.each( function() {
-        $(this).attr('value', randNum.numCrystal());
-    });
-
+        $(this).attr('value', numGenCrystal());
+    });    
+    function numGenCrystal() {
+        let randNumCrystal = Math.floor(Math.random() * 12) + 1;
+        return randNumCrystal;
+    }
+    
     console.log('Target No. : ', randNumTarget);
     console.log(
         'Crystal No. : ',
@@ -88,10 +79,45 @@ function scoreBoard() {
 $(document).on('click', '.btn', function (e) {
     finalScore += parseInt($(this).val());
     $playerScore.text(finalScore);
-        console.log(finalScore);
+    console.log(finalScore);
     scoreBoard();
     // console.table($(this).val()); // e.target
 });
 
 console.log('——————');
 });
+
+/* 
+const randNum = () => {
+    randNumCrystal = Math.floor(Math.random() * 12) + 1;
+    randNumTarget = Math.floor(Math.random() * (120 - 19)) + 19;
+    return {
+        numCrystal : randNumCrystal,
+        numTarget : randNumTarget
+    };
+};
+// console.dir(randNum);
+*/
+
+/* 
+var imgFolder = "./assets/IMG/";
+$.ajax({
+    url : imgFolder,
+    // dataType: 'json',
+    success: function (data) {
+        // console.log( $(data).find(".icon-image") );
+        $(data).find(".icon-image").each( function() {
+            let fileName = this.href.replace("http://" + window.location.host, "");
+            // console.log(this.title);
+            console.log(fileName);
+        });
+
+        // $(data).find("a").attr("href", function (i, val) {
+            // if( val.match(/\.(jpe?g|png)$/) ) {
+                // console.log(val);
+                // $("body").append( "<img src='"+ val +"'>" );
+            // } 
+        // });
+    }
+});
+*/
