@@ -121,3 +121,18 @@ $.ajax({
     }
 });
 */
+
+/* 
+// let winPrompt = setInterval(winInterval, 500);
+// function winInterval() {
+    // if ( $('.winner').attr('class') === 'win-class' ) {
+        $('.winner').css('display', 'inline-block');
+        $('.winner').toggleClass('win-color');
+    // } else {
+        // $('.winner').css('display', 'none');
+        // clearInterval(winInterval);
+    // }
+// }
+// clearTimeout(winPrompt, 1100);
+// let lossPrompt = ;
+*/

@@ -22,7 +22,7 @@ let imgArr = [
     './assets/IMG/LOZ-8bit-rupee-red.png',
     './assets/IMG/LOZ-8bit-rupee-silver.png'
 ];
-    // console.log(imgArr);
+// console.log(imgArr);
 
 const $win = $('.win');
 const $loss = $('.loss');
@@ -56,10 +56,10 @@ const randNum = {
 
 function startGame() {    
     randNum.numTarget();
-
+    
     $btn.each( function() {
         randNum.numCrystal();
-
+        
         if ( !arrNumCrystal.includes(randNumCrystal) ) {
             arrNumCrystal.push(randNumCrystal);
             $(this).attr('data-value', randNumCrystal);
@@ -69,7 +69,7 @@ function startGame() {
             $(this).attr('data-value', randNumCrystal);
         }
     });    
-
+    
     $img.each( function() {
         randNum.imgCrystal();
         
@@ -82,7 +82,7 @@ function startGame() {
             $(this).attr('src', randImgCrystal);
         }
     });
-
+    
     console.log('Target No. : ', randNumTarget);
     console.log( 'Crystal No. : ', arrNumCrystal.join(' ⸎ '));    
     
